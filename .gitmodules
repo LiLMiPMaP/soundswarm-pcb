@@ -1,0 +1,3 @@
+[submodule "SoundSwarm-eagle/Lio-Eagle-Library"]
+	path = SoundSwarm-eagle/Lio-Eagle-Library
+	url = https://github.com/lionello/Lio-Eagle-Library
