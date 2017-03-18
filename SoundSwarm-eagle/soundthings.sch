@@ -5445,7 +5445,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R7" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="2k"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$3" library="microbuilder" deviceset="VBAT" device=""/>
-<part name="U$4" library="microbuilder" deviceset="VBAT" device=""/>
 <part name="R8" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="300"/>
 <part name="U$5" library="lio" deviceset="TLV702" device="33"/>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -5488,6 +5487,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="D6" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
 <part name="GND" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5510,7 +5510,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="R7" gate="G$1" x="119.38" y="167.64"/>
 <instance part="GND6" gate="1" x="124.46" y="162.56"/>
 <instance part="U$3" gate="G$1" x="45.72" y="157.48"/>
-<instance part="U$4" gate="G$1" x="27.94" y="53.34"/>
 <instance part="R8" gate="G$1" x="25.4" y="27.94" rot="R90"/>
 <instance part="U$5" gate="G$1" x="5.08" y="170.18"/>
 <instance part="GND8" gate="1" x="5.08" y="154.94"/>
@@ -5567,6 +5566,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="NAME" x="93.98" y="142.24" size="1.778" layer="95"/>
 </instance>
 <instance part="GND15" gate="1" x="93.98" y="137.16"/>
+<instance part="SUPPLY3" gate="VDD" x="27.94" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -5773,11 +5773,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="45.72" y1="149.86" x2="45.72" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="VBAT"/>
-<wire x1="27.94" y1="50.8" x2="27.94" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="U$7" gate="G$1" pin="VIN+"/>
-</segment>
-<segment>
 <pinref part="R11" gate="G$1" pin="2"/>
 <pinref part="U$6" gate="G$1" pin="VBAT"/>
 </segment>
@@ -5840,6 +5835,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="L1" gate="G$1" pin="VDD"/>
 <pinref part="SUPPLY9" gate="VDD" pin="VDD"/>
 <wire x1="-2.54" y1="93.98" x2="-2.54" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="27.94" y1="50.8" x2="27.94" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U$7" gate="G$1" pin="VIN+"/>
+<pinref part="SUPPLY3" gate="VDD" pin="VDD"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -5956,7 +5956,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <approved hash="104,1,40.64,83.82,ESP8266MOD,VCC,3.3V,,,"/>
 <approved hash="104,1,99.06,162.56,U$2,VCC,5V,,,"/>
 <approved hash="104,1,-10.16,172.72,U$5,IN,VDD,,,"/>
-<approved hash="104,1,27.94,43.18,U$7,VIN+,VBAT,,,"/>
+<approved hash="104,1,27.94,43.18,U$7,VIN+,VDD,,,"/>
 <approved hash="113,1,67.31,148.598,S2,,,,,"/>
 <approved hash="113,1,97.1973,30.2853,SOLENOID,,,,,"/>
 <approved hash="113,1,42.5027,147.125,BAT,,,,,"/>
