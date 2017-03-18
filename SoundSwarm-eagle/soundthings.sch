@@ -562,8 +562,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <pin name="GPIO15" x="25.4" y="-5.08" visible="pin" length="middle" direction="in" rot="R180"/>
 <pin name="GPIO2" x="25.4" y="0" visible="pin" length="middle" rot="R180"/>
 <pin name="GPIO0" x="25.4" y="5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="GPIO5" x="25.4" y="10.16" visible="pin" length="middle" swaplevel="1" rot="R180"/>
-<pin name="GPIO4" x="25.4" y="15.24" visible="pin" length="middle" swaplevel="1" rot="R180"/>
+<pin name="GPIO4" x="25.4" y="10.16" visible="pin" length="middle" swaplevel="1" rot="R180"/>
+<pin name="GPIO5" x="25.4" y="15.24" visible="pin" length="middle" swaplevel="1" rot="R180"/>
 <pin name="RXD" x="25.4" y="20.32" visible="pin" length="middle" direction="in" rot="R180"/>
 <pin name="TXD" x="25.4" y="25.4" visible="pin" length="middle" direction="out" rot="R180"/>
 <text x="-7.62" y="27.94" size="1.27" layer="94">&gt;NAME</text>
@@ -661,8 +661,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <connect gate="G$1" pin="GPIO15" pad="GPIO15"/>
 <connect gate="G$1" pin="GPIO16" pad="GPIO16"/>
 <connect gate="G$1" pin="GPIO2" pad="GPIO2"/>
-<connect gate="G$1" pin="GPIO4" pad="GPIO4"/>
-<connect gate="G$1" pin="GPIO5" pad="GPIO5"/>
+<connect gate="G$1" pin="GPIO4" pad="GPIO5"/>
+<connect gate="G$1" pin="GPIO5" pad="GPIO4"/>
 <connect gate="G$1" pin="REST" pad="REST"/>
 <connect gate="G$1" pin="RXD" pad="RXD"/>
 <connect gate="G$1" pin="TXD" pad="TXD"/>
@@ -684,8 +684,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <connect gate="G$1" pin="GPIO15" pad="GPIO15"/>
 <connect gate="G$1" pin="GPIO16" pad="GPIO16"/>
 <connect gate="G$1" pin="GPIO2" pad="GPIO2"/>
-<connect gate="G$1" pin="GPIO4" pad="GPIO4"/>
-<connect gate="G$1" pin="GPIO5" pad="GPIO5"/>
+<connect gate="G$1" pin="GPIO4" pad="GPIO5"/>
+<connect gate="G$1" pin="GPIO5" pad="GPIO4"/>
 <connect gate="G$1" pin="REST" pad="REST"/>
 <connect gate="G$1" pin="RXD" pad="RXD"/>
 <connect gate="G$1" pin="TXD" pad="TXD"/>
@@ -707,8 +707,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <connect gate="G$1" pin="GPIO15" pad="GPIO15"/>
 <connect gate="G$1" pin="GPIO16" pad="GPIO16"/>
 <connect gate="G$1" pin="GPIO2" pad="GPIO2"/>
-<connect gate="G$1" pin="GPIO4" pad="GPIO4"/>
-<connect gate="G$1" pin="GPIO5" pad="GPIO5"/>
+<connect gate="G$1" pin="GPIO4" pad="GPIO5"/>
+<connect gate="G$1" pin="GPIO5" pad="GPIO4"/>
 <connect gate="G$1" pin="REST" pad="REST"/>
 <connect gate="G$1" pin="RXD" pad="RXD"/>
 <connect gate="G$1" pin="TXD" pad="TXD"/>
@@ -5418,13 +5418,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.2032" drill="0">
+<clearance class="0" value="0.2032"/>
 </class>
 <class number="1" name="ground" width="0.4064" drill="0">
-<clearance class="1" value="0.2032"/>
+<clearance class="1" value="0.3048"/>
 </class>
 <class number="2" name="power" width="0.4064" drill="0">
-<clearance class="2" value="0.2032"/>
+<clearance class="2" value="0.3048"/>
 </class>
 </classes>
 <parts>
@@ -5484,7 +5485,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="!CHRG" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
 <part name="3V3" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
 <part name="5V" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
-<part name="GPIO12" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
+<part name="D6" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
 <part name="GND" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
@@ -5559,7 +5560,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="5V" gate="G$1" x="101.6" y="175.26" smashed="yes">
 <attribute name="NAME" x="106.68" y="175.26" size="1.778" layer="95"/>
 </instance>
-<instance part="GPIO12" gate="G$1" x="38.1" y="93.98" smashed="yes" rot="R180">
+<instance part="D6" gate="G$1" x="38.1" y="93.98" smashed="yes" rot="R180">
 <attribute name="NAME" x="40.64" y="91.44" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="GND" gate="G$1" x="96.52" y="139.7" smashed="yes">
@@ -5680,10 +5681,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="ESP8266MOD" gate="G$1" pin="GPIO12"/>
 <wire x1="38.1" y1="93.98" x2="40.64" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="GPIO12" gate="G$1" pin="1"/>
+<pinref part="D6" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="DIN" class="0">
+<net name="GPIO14" class="0">
 <segment>
 <pinref part="ESP8266MOD" gate="G$1" pin="GPIO14"/>
 <pinref part="L1" gate="G$1" pin="DIN"/>
@@ -5848,7 +5849,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="109.22" y="45.72" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ESP8266MOD" gate="G$1" pin="GPIO5"/>
+<pinref part="ESP8266MOD" gate="G$1" pin="GPIO4"/>
 <wire x1="86.36" y1="104.14" x2="91.44" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="104.14" x2="91.44" y2="106.68" width="0.1524" layer="91"/>
 <label x="91.44" y="106.68" size="1.778" layer="95" xref="yes"/>
@@ -5861,7 +5862,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="101.6" y="48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ESP8266MOD" gate="G$1" pin="GPIO4"/>
+<pinref part="ESP8266MOD" gate="G$1" pin="GPIO5"/>
 <wire x1="86.36" y1="109.22" x2="99.06" y2="109.22" width="0.1524" layer="91"/>
 <label x="99.06" y="109.22" size="1.778" layer="95" xref="yes"/>
 </segment>
