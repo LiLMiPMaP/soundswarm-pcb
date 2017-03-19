@@ -5469,7 +5469,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C4" library="SparkFun-Capacitors" deviceset="100UF-25V-20%(PTH)" device="" value="1uF"/>
 <part name="R11" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="300k"/>
 <part name="R12" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3" value="100k"/>
-<part name="U$6" library="microbuilder" deviceset="VBAT" device=""/>
 <part name="GND11" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="BUTTON" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="PTH"/>
@@ -5488,6 +5487,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND" library="SparkFun-Passives" deviceset="TEST-POINT" device="TP_15TH_THRU"/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
+<part name="SUPPLY10" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5534,7 +5534,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="C4" gate="G$1" x="66.04" y="172.72"/>
 <instance part="R11" gate="G$1" x="5.08" y="119.38" rot="R90"/>
 <instance part="R12" gate="G$1" x="5.08" y="109.22" rot="R90"/>
-<instance part="U$6" gate="G$1" x="5.08" y="127"/>
 <instance part="GND11" gate="1" x="5.08" y="101.6"/>
 <instance part="SUPPLY1" gate="G$1" x="66.04" y="175.26"/>
 <instance part="BUTTON" gate="G$1" x="68.58" y="66.04"/>
@@ -5567,6 +5566,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </instance>
 <instance part="GND15" gate="1" x="93.98" y="137.16"/>
 <instance part="SUPPLY3" gate="VDD" x="27.94" y="50.8"/>
+<instance part="SUPPLY10" gate="VDD" x="5.08" y="124.46"/>
 </instances>
 <busses>
 </busses>
@@ -5772,10 +5772,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="58.42" y="162.56"/>
 <wire x1="45.72" y1="149.86" x2="45.72" y2="154.94" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="R11" gate="G$1" pin="2"/>
-<pinref part="U$6" gate="G$1" pin="VBAT"/>
-</segment>
 </net>
 <net name="GPIO16" class="0">
 <segment>
@@ -5840,6 +5836,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="27.94" y1="50.8" x2="27.94" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="U$7" gate="G$1" pin="VIN+"/>
 <pinref part="SUPPLY3" gate="VDD" pin="VDD"/>
+</segment>
+<segment>
+<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="SUPPLY10" gate="VDD" pin="VDD"/>
 </segment>
 </net>
 <net name="SCL" class="0">
